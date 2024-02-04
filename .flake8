@@ -1,0 +1,39 @@
+[flake8]
+
+application-import-names = simpml
+max-line-length = 100
+max-doc-length = 100
+
+ignore =
+    # W503 - Line break before binary operator
+    W503
+    # C408 - Unnecessary dict call - rewrite as a literal
+    C408
+    # D205, D400, and D415 are because we sometimes split the first line of the docstring
+    # D205 - 1 blank line required between summary line and description
+    D205
+    # D400 - First line should end with a period
+    D400
+    # D415 - First line should end with a period, question mark, or exclamation point
+    D415
+    # E203 - Whitespace before ':'
+    E203
+    # N803 - Argument name 'X' should be lowercase
+    N803
+    # N806 - Variable 'X' in function should be lowercase
+    N806
+
+# E402 - Module level import not at top of file
+# F401 - '.models_pool.*' imported but unused
+# F403 - 'from .models_pool import *' used; unable to detect undefined names
+per-file-ignores =
+    simpml/common/all.py:F401,F403
+    simpml/tabular/all.py:F401,F403
+    simpml/vision/all.py:F401,F403
+    tests/test_*.py:E402
+
+# Config for flake8-docstrings
+docstring-convention = google
+
+# Config for flake8-import-order
+import-order-style = smarkets
