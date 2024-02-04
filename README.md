@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/docs/examples/resources/SimpML_Logo.png" alt="drawing"/>
+<img src="/docs/examples/resources/SimpML_Logo.png" alt="SimpML Logo" width="300" height="300"/>
 
 ## **An open-source, low-code machine learning library in Python**
 
@@ -16,6 +16,8 @@
 |---|---|
 | **License** | [![License](https://img.shields.io/pypi/l/ansicolortags.svg)](https://img.shields.io/pypi/l/ansicolortags.svg)
 
+<div align="left">
+    
 # Welcome to SimpML
 SimpML is an open-source, no/low-code machine learning library in Python that simplifies and automates machine learning workflows. With SimpML, you can quickly build your desired machine learning pipeline with just a few lines of code, drastically reducing your time-to-model.
 
