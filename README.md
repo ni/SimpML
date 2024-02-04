@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/docs/examples/resources/SimpML_Logo.png" alt="SimpML Logo" width="300" height="300"/>
+<img src="/docs/examples/resources/SimpML_Logo.png" alt="SimpML Logo" width="200" height="200"/>
 
 ## **An open-source, low-code machine learning library in Python**
 
