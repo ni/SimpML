@@ -3,18 +3,13 @@
 from __future__ import annotations
 
 import os
-import sys
-
-ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_PATH not in sys.path:
-    sys.path.append(ROOT_PATH)
 
 from simpml.core.base import MetricName, PredictionType
 from simpml.core.experiment_manager import ExperimentManager
 from simpml.tabular.interpreter import TabularInterpreterClassification
 from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
 
-TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
+TEST_DATA_DIR: str = os.path.join("tests", "data")
 
 
 def test_noisy_features() -> None:
