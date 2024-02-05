@@ -16,6 +16,7 @@ from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
 
 TEST_DATA_DIR: str = os.path.join("tests", "data")
 
+
 def test_get_data() -> None:
     """Test getting data."""
     data_manager = SupervisedTabularDataManager(
