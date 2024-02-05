@@ -14,7 +14,7 @@ from simpml.tabular.tabular_data_manager import UnsupervisedTabularDataManager
 
 def test_unsupervised() -> None:
     """Test the unsupervised case."""
-    data_path = os.path.join(ROOT_PATH, "docs/examples/datasets/binary/Titanic.csv")
+    data_path = os.path("docs/examples/datasets/binary/Titanic.csv")
 
     data_manager = UnsupervisedTabularDataManager(
         data=data_path,
@@ -60,7 +60,7 @@ def test_unsupervised() -> None:
 
 def test_unsupervised_clustering() -> None:
     """Test the unsupervised clustering case."""
-    data_path = os.path.join(ROOT_PATH, "docs/examples/datasets/binary/Titanic.csv")
+    data_path = os.path("docs/examples/datasets/binary/Titanic.csv")
 
     data_manager = UnsupervisedTabularDataManager(
         data=data_path,
