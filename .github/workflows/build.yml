@@ -32,14 +32,3 @@ jobs:
       - name: pytest
         run: |-
             poe test --junitxml=test_results/test.xml
-      - name: Upload test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: test_results
-          path: test_results/*.xml
-        if: always()
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        with:
-          files: "test_results/*.xml"
-        if: always()
