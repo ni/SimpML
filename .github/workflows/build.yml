@@ -32,9 +32,9 @@ jobs:
       - name: pytest
         run: |-
             poe test
-      - name: Publish test results
-        if: always()
-        uses: EnricoMi/publish-unit-test-result-action@v2.12.0
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
         with:
-            comment_title: Python ${{ env.python_version }}
-            junit_files: "**/test-results.xml"
+          name: test_results
+          path: test_results/*.xml
+        if: always()
