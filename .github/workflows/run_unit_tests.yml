@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           poetry install
       - name: Run unit tests
-        run: poe test
+        run: poetry test
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
