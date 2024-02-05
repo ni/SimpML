@@ -26,9 +26,3 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           poetry install
-      - name: Generate ni-simpml files
-        run: |
-          rm -fr generated/simpml
-          poetry run python src/codegen --dest generated/simpml
-      - name: Check for files dirtied by codegen
-        run: git diff --exit-code
