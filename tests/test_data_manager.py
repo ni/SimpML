@@ -14,12 +14,15 @@ ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT_PATH not in sys.path:
     sys.path.append(ROOT_PATH)
 
+
+
 from simpml.core.base import Dataset, PredictionType
 from simpml.tabular.adapters_pool import ManipulateAdapter
 from simpml.tabular.splitter_pool import RandomSplitter
 from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
 
-TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
+sys.path.insert(0, '.') 
+TEST_DATA_DIR: str = os.path.join("data")
 
 
 def test_get_data() -> None:
