@@ -3,11 +3,16 @@
 from __future__ import annotations
 
 import os
+import sys
 from typing import List
 
 import numpy as np
 from imblearn.over_sampling import SMOTE, SMOTEN, SMOTENC
 from imblearn.under_sampling import ClusterCentroids
+
+ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_PATH not in sys.path:
+    sys.path.append(ROOT_PATH)
 
 from simpml.core.base import Dataset, PredictionType
 from simpml.tabular.adapters_pool import ManipulateAdapter
