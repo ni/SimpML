@@ -7,7 +7,7 @@ jobs:
   build:
     name: Build
     runs-on: 
-      - ubuntu-latest
+      - windows-latest
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
@@ -25,12 +25,15 @@ jobs:
           poetry install --with dev --no-root
       - name: mypy
         run: |-
+            set PATH=%PATH%;C:\Users\tfsbuild\.local\bin;C:\Users\tfsbuild\AppData\Roaming\Python\Python38\Scripts
             poe types
       - name: flake8
         run: |-
+            set PATH=%PATH%;C:\Users\tfsbuild\.local\bin;C:\Users\tfsbuild\AppData\Roaming\Python\Python38\Scripts
             poe lint
       - name: pytest
         run: |-
+            set PATH=%PATH%;C:\Users\tfsbuild\.local\bin;C:\Users\tfsbuild\AppData\Roaming\Python\Python38\Scripts
             poe test
       - name: Publish test results
         if: always()
