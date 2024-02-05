@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import pickle
+import sys
 import tempfile
 from typing import Dict, Optional, Tuple
 
@@ -11,6 +12,10 @@ import dill
 import joblib
 import numpy as np
 import pandas as pd
+
+ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_PATH not in sys.path:
+    sys.path.append(ROOT_PATH)
 
 from simpml.core.base import Dataset, PredictionType
 from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
