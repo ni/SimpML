@@ -6,8 +6,9 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: 
-      - windows-latest
+    runs-on:
+      - self-hosted
+      - DevCentral-OPlus-WebSrv02
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
