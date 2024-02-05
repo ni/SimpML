@@ -7,8 +7,7 @@ jobs:
   build:
     name: Build
     runs-on:
-      - self-hosted
-      - DevCentral-OPlus-WebSrv02
+      - windows-latest
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
