@@ -31,7 +31,7 @@ jobs:
             poe lint
       - name: pytest
         run: |-
-            poe test
+            poe test --junitxml=test_results/test.xml
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
