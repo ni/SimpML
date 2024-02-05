@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import sys
 from typing import Any, Dict
 
 from feature_engine.encoding import OneHotEncoder
@@ -10,6 +11,10 @@ from feature_engine.wrappers import SklearnTransformerWrapper
 from imblearn.over_sampling import SMOTE
 from sklearn.pipeline import Pipeline as SklearnPipeline
 from sklearn.preprocessing import MinMaxScaler
+
+ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_PATH not in sys.path:
+    sys.path.append(ROOT_PATH)
 
 TEST_DATA_DIR: str = os.path.join("tests", "data")
 
