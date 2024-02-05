@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - 'releases/**'
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/build.yml
+  run_unit_tests:
+    name: Run unit tests
+    uses: ./.github/workflows/run_unit_tests.yml
+    needs: [build]
+  generate_docs:
+    name: Generate docs
+    uses: ./.github/workflows/generate_docs.yml
+    needs: [build]
+  report_test_results:
+    name: Report test results
+    uses: ./.github/workflows/report_test_results.yml
+    needs: [run_unit_tests]
+    if: always()

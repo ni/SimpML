@@ -1,0 +1,42 @@
+name: Run unit tests
+
+on:
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  run_unit_tests:
+    name: Run unit tests
+    runs-on:
+      - ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.8"]
+      # Fail-fast skews the pass/fail ratio and seems to make pytest produce
+      # incomplete JUnit XML results.
+      fail-fast: false
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Set up Poetry
+        uses: Gr1N/setup-poetry@v8
+        with:
+          poetry-version: "1.4.0"
+      - name: Check Poetry version
+        run: poetry --version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          poetry install
+      - name: Run unit tests
+        run: poetry run pytest -v --cov=generated/nidaqmx --junitxml=test_results/unit-${{ matrix.os }}-py${{ matrix.python-version }}.xml tests/unit
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test_results
+          path: test_results/*.xml
+        if: always()
