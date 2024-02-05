@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import os
-import sys
 from typing import Any, Dict
 
 from feature_engine.encoding import OneHotEncoder
@@ -12,11 +11,7 @@ from imblearn.over_sampling import SMOTE
 from sklearn.pipeline import Pipeline as SklearnPipeline
 from sklearn.preprocessing import MinMaxScaler
 
-ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_PATH not in sys.path:
-    sys.path.append(ROOT_PATH)
-
-TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
+TEST_DATA_DIR: str = os.path.join("tests", "data")
 
 from simpml.core.base import Dataset, PredictionType
 from simpml.tabular.adapters_pool import ManipulateAdapter
