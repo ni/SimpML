@@ -19,7 +19,7 @@ from simpml.tabular.adapters_pool import ManipulateAdapter
 from simpml.tabular.splitter_pool import RandomSplitter
 from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
 
-TEST_DATA_DIR: str = os.path.join(${{ github.workspace }}, "tests", "data")
+TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
 
 
 def test_get_data() -> None:
