@@ -13,7 +13,7 @@ TEST_DATA_DIR: str = os.path.join("tests", "data")
 def test_tabular_data_fetcher() -> None:
     """Test the `TabularDataFetcher` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": os.path.join(ROOT_PATH, "docs/examples/datasets/binary/Titanic.csv"),
+        "path": os.path("docs/examples/datasets/binary/Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
