@@ -7,11 +7,6 @@
 from __future__ import annotations
 
 import os
-import sys
-
-ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_PATH not in sys.path:
-    sys.path.append(ROOT_PATH)
 
 from simpml.core.base import MetricName, PredictionType
 from simpml.core.experiment_manager import ExperimentManager
@@ -19,7 +14,7 @@ from simpml.tabular.tabular_data_manager import SupervisedTabularDataManager
 from simpml.vision.data import VisionDataManager
 from fastai.vision.all import ImageDataLoaders, untar_data, URLs, get_image_files, Resize
 
-TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
+TEST_DATA_DIR: str = os.path.join("tests", "data")
 
 def test_best_opt_metric() -> None:
     """Test finding the best optimization metric."""
