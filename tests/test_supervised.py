@@ -3,18 +3,13 @@
 from __future__ import annotations
 
 import os
-import sys
 from typing import cast
 
 import pandas as pd
 import plotly.graph_objects as go
 import pytest
 
-ROOT_PATH: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if ROOT_PATH not in sys.path:
-    sys.path.append(ROOT_PATH)
-
-TEST_DATA_DIR: str = os.path.join(ROOT_PATH, "tests", "data")
+TEST_DATA_DIR: str = os.path.join("tests", "data")
 
 from simpml.core.base import Dataset, MetricName, PredictionType
 from simpml.core.data_set import DataSet
