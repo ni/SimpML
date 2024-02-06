@@ -32,7 +32,7 @@ from simpml.tabular.tabular_data_manager import TabularDataManager
 def test_pipeline() -> None:
     """Test the `Pipeline` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": "docs/examples/datasets/binary/Titanic.csv",
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
@@ -86,7 +86,7 @@ def test_pipeline() -> None:
 def test_normalization() -> None:
     """Test that normalization step (MinMaxScaler) does not introduce None into dataset."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": "docs/examples/datasets/binary/Titanic.csv",
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
@@ -128,7 +128,7 @@ def test_normalization() -> None:
 def test_preserving_of_indexes_after_normalization() -> None:
     """Test that normalization step does not modify string indexes."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": "docs/examples/datasets/binary/Titanic.csv",
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
     }
     my_data_fetcher = TabularDataFetcher(data=kwargs_load_data["path"])
