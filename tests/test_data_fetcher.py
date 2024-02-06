@@ -12,6 +12,8 @@ if ROOT_PATH not in sys.path:
 
 TEST_DATA_DIR: str = os.path.join("tests", "data")
 
+from simpml.tabular.data_fetcher_pool import TabularDataFetcher
+
 
 def test_tabular_data_fetcher() -> None:
     """Test the `TabularDataFetcher` class."""
