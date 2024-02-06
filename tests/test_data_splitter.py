@@ -26,7 +26,7 @@ TEST_DATA_DIR: str = os.path.join("tests", "data")
 def test_random_splitter() -> None:
     """Test the `RandomSplitter` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": os.path.join(ROOT_PATH, "docs/examples/datasets/binary/Titanic.csv"),
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
@@ -75,7 +75,7 @@ def test_group_splitter() -> None:
 def test_index_splitter() -> None:
     """Test the `IndexSplitter` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": os.path.join("docs/examples/datasets/binary/Titanic.csv"),
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
@@ -98,7 +98,7 @@ def test_datetime_splitter() -> None:
     """Test the `DateTimeSplitter` class."""
     kwargs_load_data: Dict[str, Any] = {
         "path": os.path.join(
-            ROOT_PATH, "docs/examples/datasets/multiclass/Shelter Animal Outcomes.csv"
+            TEST_DATA_DIR, "Shelter Animal Outcomes.csv"
         ),
         "target": "OutcomeType",
         "drop_cols": [],
