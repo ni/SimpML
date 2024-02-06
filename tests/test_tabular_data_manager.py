@@ -30,7 +30,7 @@ from simpml.tabular.tabular_data_manager import TabularDataManager
 def test_tabular_data_manager() -> None:
     """Test the `TabularDataManager` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": "docs/examples/datasets/binary/Titanic.csv",
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
