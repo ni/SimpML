@@ -18,7 +18,7 @@ from simpml.tabular.data_fetcher_pool import TabularDataFetcher
 def test_tabular_data_fetcher() -> None:
     """Test the `TabularDataFetcher` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": "docs/examples/datasets/binary/Titanic.csv",
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
