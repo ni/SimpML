@@ -49,7 +49,7 @@ def test_random_splitter() -> None:
 def test_group_splitter() -> None:
     """Test the `GroupSplitter` class."""
     kwargs_load_data: Dict[str, Any] = {
-        "path": os.path.join(ROOT_PATH, "docs/examples/datasets/binary/Titanic.csv"),
+        "path": os.path.join(TEST_DATA_DIR, "Titanic.csv"),
         "target": "Survived",
         "drop_cols": ["PassengerId", "Name"],
     }
