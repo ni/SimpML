@@ -2,7 +2,7 @@
 
 <img src="/docs/examples/resources/SimpML_Logo.png" alt="SimpML Logo" width="200" height="200"/>
 
-## **SimpML | An open-source, low-code machine learning library in Python**
+## **SimpML: Simplifying Machine Learning**
 
 <p align="center">
 <h3>
@@ -19,11 +19,31 @@
 <div align="left">
     
 # Welcome to SimpML
-SimpML is an open-source, no/low-code machine learning library in Python that simplifies and automates machine learning workflows. With SimpML, you can quickly build your desired machine learning pipeline with just a few lines of code, drastically reducing your time-to-model.
+SimpML is a robust framework designed to streamline the process of training machine learning models regardless of the type using no/low-code consept. Its flexible infrastructure allows for the implementation and integration of various components, catering to a wide array of machine learning tasks.
 
-## Features
-### Preprocess
-The preprocess component of SimpML includes all the necessary steps for data preprocessing, such as:
+
+## Core Components
+To use the SimpML framework for training custom machine learning models, you need to implement the following interfaces:
+
+### Model Manager
+A wrapper with a standard API (Similar to SKlearn) for a machine learning model
+
+### Data Manager:
+Manages data preprocessing, loading, and split into train and test, to ensure data is in the right format for model training.
+
+### Metric Manager
+ Responsible for evaluating model performance through different metrics, providing insights into model accuracy and effectiveness.
+
+These components are designed with interfaces that ensure compatibility and interoperability within the SimpML ecosystem. It is essential that users ensure these components work seamlessly together to leverage the full power of the experiment manager for efficient model training because the Model Manager has to train on the Data Manager and the Metric Manager has to calculate the index on what comes back from the model.
+To verify this you can use our personal assistant [will be added soon]
+
+## Specialized Interfaces for Problem Families
+SimpML offers ready-made interfaces for specific problem families, significantly reducing the development time for common machine learning tasks:
+
+### Tabular
+For tabular data, SimpML supports a wide range of tasks including supervised learning, unsupervised learning, and anomaly detection. This interface simplifies data manipulation, feature extraction, and model selection for tabular datasets, enabling efficient handling of both numerical and categorical data.
+
+#### Preprocessing
 
  - Pivot: Transforming data from a long to wide format.
  - Imputation: Handling missing values in the dataset.
@@ -32,17 +52,7 @@ The preprocess component of SimpML includes all the necessary steps for data pre
  - Balancing: Addressing class imbalance in the data.
  - And many more preprocessing techniques.
 
-Once you build your preprocess pipeline, it will automatically run on your inference data.
-
-### Modelling
-SimpML provides a rich experiment manager for modeling tasks, including:
-
- - Hyperparameter optimization: Automatically finding the best hyperparameters for your models.
- - Cross-model and cross-dataset comparison: Comparing the performance of different models on different datasets.
- - Full integration with ML-Flow: Tracking and managing your experiments with MLflow.
- - And many more features to streamline the modeling process.
-
-### Interpretation
+#### Interpretation
 The interpretation component of SimpML includes various visualizations and error analysis tools to understand your trained models. Some of the features include:
 
  - Feature importance: Identifying the most important features in your models.
@@ -52,8 +62,37 @@ The interpretation component of SimpML includes various visualizations and error
  - Identification of "bad" features: Identifying features that negatively affect model performance.
  - And many more tools to gain insights into your models.
 
+### Vision
+
+The vision interface in SimpML is built upon the fastai library, providing advanced functionalities for image classification and segmentation tasks. This interface makes it easier to work with deep learning models for computer vision, leveraging fastai's dynamic and high-level capabilities.
+
+#### Full fastai integration
+All the capabilities that are available in fastai are also easily available in SimpML NV which makes the process easy and flexible
+
+### LLM (Large Language Models)
+SimpML integrates with Huggingface-based models, offering a streamlined process for fine-tuning LLMs with LORA for a variety of NLP tasks. This interface simplifies the complexities of working with large language models, making it accessible to fine-tune them for specific applications.
+
+#### Model Fine-tuning: 
+Simplified process for applying LORA adjustments to pre-trained models.
+
+## Installation
+SimpML can be installed as a whole package or in parts, based on the specific requirements of your project. Use the following pip commands for installation:
+
+- **Core Framework:**
+pip install SimpML[core]
+
+- **Tabular Data:**
+pip install SimpML[Tabular]
+
+
+- **Vision:**
+pip install SimpML[Vision]
+
+- **LLM (Large Language Models):**
+pip install SimpML[LLM]
+
 ## Getting Started
-To get started with SimpML, refer to the documentation and video training available at the SimpML website here. The documentation provides detailed explanations of the library's functionalities and how to use them effectively.
+To get started with SimpML, dive into the comprehensive documentation available on the official SimpML website. The documentation provides detailed guides on implementing the core components, utilizing the specialized interfaces for various problem domains, and integrating SimpML into your machine learning workflow for efficient model development and evaluation.
 
 ## Dependencies
 SimpML is built as a Python wrapper around industry-standard machine learning libraries, including:
