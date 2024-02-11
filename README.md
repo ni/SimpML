@@ -84,17 +84,30 @@ Simplified process for applying LORA adjustments to pre-trained models.
 SimpML can be installed as a whole package or in parts, based on the specific requirements of your project. Use the following pip commands for installation:
 
 - **Core Framework:**
-pip install SimpML[core]
+This installation will install the SimpML framework on which specific use cases can be built
+```python
+# install SimpML
+pip install SimpML
+```
+Additionally, you can install the code and dependencies required to use SimpML's ready-made use cases:
 
-- **Tabular Data:**
+- **Tabular:**
+- ```python
+# install SimpML Tabular use cases
 pip install SimpML[Tabular]
-
+```
 
 - **Vision:**
+- ```python
+# install SimpML Vision use cases
 pip install SimpML[Vision]
+```
 
 - **LLM (Large Language Models):**
+- ```python
+# install SimpML LLM use cases
 pip install SimpML[LLM]
+```
 
 ## Getting Started
 To get started with SimpML, dive into the comprehensive documentation available on the official SimpML website. The documentation provides detailed guides on implementing the core components, utilizing the specialized interfaces for various problem domains, and integrating SimpML into your machine learning workflow for efficient model development and evaluation.
