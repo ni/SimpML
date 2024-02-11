@@ -92,19 +92,19 @@ pip install SimpML
 Additionally, you can install the code and dependencies required to use SimpML's ready-made use cases:
 
 - **Tabular:**
-- ```python
+```python
 # install SimpML Tabular use cases
 pip install SimpML[Tabular]
 ```
 
 - **Vision:**
-- ```python
+```python
 # install SimpML Vision use cases
 pip install SimpML[Vision]
 ```
 
 - **LLM (Large Language Models):**
-- ```python
+```python
 # install SimpML LLM use cases
 pip install SimpML[LLM]
 ```
