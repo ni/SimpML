@@ -21,6 +21,8 @@
 # Welcome to SimpML
 SimpML is a robust framework designed to streamline the process of training machine learning models regardless of the type using no/low-code consept. Its flexible infrastructure allows for the implementation and integration of various components, catering to a wide array of machine learning tasks.
 
+![alt text](docs/examples/resources/TabularGif.gif)
+
 SimpML revolutionizes machine learning development by enabling the training of any model on any type of data through its versatile infrastructure. At its core, SimpML simplifies the process to such an extent that training a series of diverse models and conducting thorough evaluations can be achieved with just a single line of code. This streamlined approach not only accelerates the model development cycle but also democratizes advanced machine learning capabilities, making them accessible to developers of all skill levels.
 
 Beyond its foundational simplicity, SimpML is complemented by a comprehensive suite of ready-made implementations. These pre-configured solutions are meticulously designed to tackle a wide array of challenges commonly encountered in machine learning projects, covering classification, regression, and root cause analysis across various data domains, including tabular, time series, and image data. Additionally, for those looking to leverage the latest advancements in natural language processing, SimpML provides an easy-to-use method for fine-tuning language models from Hugging Face with Lora.
