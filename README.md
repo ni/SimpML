@@ -112,12 +112,16 @@ These libraries provide robust and efficient implementations of various machine 
 # install SimpML Vision use cases
 pip install SimpML[Vision]
 ```
+The Vision package is designed for computer vision applications, leveraging PyTorch and FastAI for deep learning. It requires the torch, fastai, and torchvision libraries for image processing and model training.
+
 
 ### **LLM (Large Language Models):**
 ```python
 # install SimpML LLM use cases
 pip install SimpML[LLM]
 ```
+The LLM package facilitates work with large language models, utilizing the Hugging Face transformers and datasets libraries. These dependencies enable easy access to pre-trained models and datasets for natural language processing tasks.
+
 
 ## Getting Started
 To get started with SimpML, dive into the comprehensive documentation available on the official SimpML website. The documentation provides detailed guides on implementing the core components, utilizing the specialized interfaces for various problem domains, and integrating SimpML into your machine learning workflow for efficient model development and evaluation.
