@@ -96,6 +96,16 @@ Additionally, you can install the code and dependencies required to use SimpML's
 # install SimpML Tabular use cases
 pip install SimpML[Tabular]
 ```
+**Dependencies**
+SimpML[Tabular] is built as a Python wrapper around industry-standard machine learning libraries, including:
+
+ - Scikit-learn
+ - XGBoost
+ - Optuna
+ - SHAP
+ - Imbalanced-learn
+
+These libraries provide robust and efficient implementations of various machine learning algorithms and techniques. SimpML leverages the best practices from real-world experience while offering flexibility to implement custom logic and easily share it between data scientists in an organization.
 
 - **Vision:**
 ```python
@@ -111,17 +121,6 @@ pip install SimpML[LLM]
 
 ## Getting Started
 To get started with SimpML, dive into the comprehensive documentation available on the official SimpML website. The documentation provides detailed guides on implementing the core components, utilizing the specialized interfaces for various problem domains, and integrating SimpML into your machine learning workflow for efficient model development and evaluation.
-
-## Dependencies
-SimpML is built as a Python wrapper around industry-standard machine learning libraries, including:
-
- - Scikit-learn
- - XGBoost
- - Optuna
- - SHAP
- - Imbalanced-learn
-
-These libraries provide robust and efficient implementations of various machine learning algorithms and techniques. SimpML leverages the best practices from real-world experience while offering flexibility to implement custom logic and easily share it between data scientists in an organization.
 
 ## Contributing
 SimpML is an open-source project, and contributions are welcome. If you encounter any issues, have feature requests, or would like to contribute to the development of SimpML, please visit the GitHub repository here.
