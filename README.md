@@ -20,6 +20,8 @@
     
 # Welcome to SimpML
 SimpML is a robust framework designed to streamline the process of training machine learning models regardless of the type using no/low-code consept. Its flexible infrastructure allows for the implementation and integration of various components, catering to a wide array of machine learning tasks.
+
+
 After setting up the necessary components through interface implementation, you can effortlessly train various models with just a few lines of code and a consistent interface, irrespective of the model or data type, like so:
 
 ![alt text](docs/examples/resources/TabularGif.gif)
